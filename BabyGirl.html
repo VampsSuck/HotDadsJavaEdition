@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <a href="HotDads.html" style="font-size: 20px;">Home</a>
+    <div class="row">
+        <div class="column">
+            <br>
+            <img src="IMG_0736.JPG" alt="Jerry Smith from Rick and Morty." height="400px" width="400px">
+            <br>
+            <h5>From: Rick and Morty</h5>
+        </div>
+        <div class="column">
+            <br>
+            <h2 id="page">Homie. He's hot, right?</h2>
+        </div>
+        <div class="column">
+            <h3>Jerry Smith</h3>
+            <br>
+            <h3>Character Facts:</h3>
+            <ul>
+                <li>He formerly was an advertising agent.</li>
+                <br>
+                <li>He is a bee keeper/author.</li>
+                <br>
+                <li>Rick and Jerry hang out regularly off screen as refrenced in "Bethic Twinstinct."</li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id = "new_gallery">
+    <h6 style="font-family: 'Courier New', Courier, monospace;" id="headingG">Gallery</h6>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="column">
+            <img src="tumblr_525015b5440e69169dc892265cc788c0_0d2c7ceb_1280.jpg" alt="rick and jerry in business attire." height="165px" width="320px">
+            <p>"✨ classic Rick and Jerry mess around ✨" by bolly--quinn on Tumblr </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="PNG image-4B27-BE65-0C-0.png" alt="Night Jerry and Day Jerry playing Downbeat" height="282" width="320">
+            <p>"Jerries,,," by kaison07 on Tumblr</p>
+        </div>
+        <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="PNG image-4350-8B26-D0-0.png" alt="Doofus Jerry and Jerry standin back to back" height="301px" width="213px">
+            <p>"Untitled" by auughhtm on Tumblr</p>
+        </div>
+        <div class="column">
+            <img src="PNG image-4C6E-9B87-22-0.png" alt=" Rick and Jerry crossing their arms angrily." height="381px" width="320px"> 
+            <p> "i love these two sm (not shipping)" by squishedegg on Tumblr</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="PNG image-4262-8014-B8-0.png" alt="a blushig jerry" height="309px" width="134px">
+            <p>"Sign up and get)))" by unirick-7 on Tumblr</p>
+        </div>
+    </div>
+    <script>
+        var name = prompt("Hi! What is your name?");
+        console.log(name);
+        alert("Look at this hot dad, " + name + "!");
+
+        var name_change = document.getElementById("page");
+        name_change.textContent = name + ". He's hot, right?"
+
+        var i = 1;
+        function changeColor(event){
+            if (document.body.style.backgroundColor != "white"){
+                document.body.style.backgroundColor = "white";
+            }
+            i++;
+            if(i == 5){
+                clearInterval(intervalID);
+                console.log("This function ran 5 times")
+            }
+        }
+        var intervalID = setInterval(changeColor,1000)
+
+        var box = document.getElementById("headingG");
+        var boxRight = 0;
+        function slide(){
+            box.style.left = boxRight + "px";
+            boxRight++;
+            if(boxRight > 500 - 50){
+            clearInterval(timer)
+            }
+        }
+        var timer = setInterval(slide, 40);
+    </script>
+</body>
+</html>
