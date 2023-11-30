@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <a href="HotDads.html" style="font-size: 20px;">Home</a>
+    <div class="row">
+        <div class="column">
+            <h2>Martin Whitly</h2>
+            <br>
+            <h2>Character Facts:</h2>
+            <ul>
+                <li> He was Surgeon.</li>
+                <br>
+                <li> He was a serial killer who was, ironically, called "The Surgeon". </li>
+                <br>
+                <li>He has two children. A son who isn't a murderer, despite his best efforts, and a daughter who is a murderer.</li>
+            </ul>
+        </div>
+        <div class="column">
+            <br>
+            <h2 id="page">Homie. He's hot, right?</h2>
+        </div>
+        <div class="column">
+            <img src="IMG_0735.JPG" alt="a picture of Martin Whitly from Prodigal Son." height="450px" width="450px">
+            <br>
+            <h4>From: Prodigal Son</h4>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id = "new_gallery">
+        <h6 style="font-family: cursive;" id="headingG">Gallery</h6>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="column">
+            <img src="martin_whitly__prodigal_son_fanart___by_asaac_de0s4pr-414w-2x.jpg" alt="pencil drawing of Martin Whitly looking to the side." height="345px" width="275px">
+            <p>"Martin Whitly (Prodigal Son fanart)" by Asaac on DeviantArt </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="16yd2nzg0df61.jpg" alt="Martin Whitly painted with coffee" height="252" width="360">
+            <p>"My Martin Whitly painted w Coffee" by Alexis_Luthor on Reddit</p>
+        </div>
+        <div class="column">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="EwFBPv0WEAMVNIl.jpg" alt="digital vingette of martin whitly" height="300px" width="300px">
+            <p>"Dr. Martin Whitly" by lilesv_ on X</p>
+        </div>
+        <div class="column">
+            <img src="EnSAXSGVQAA2h_v.jpg" alt="Digitally inked image of Martin Whitly fisting his hair with a broken hancuff dangling from his wrist." height="230px" width="256px"> 
+            <p> "Untitled" by ponderosa121 on X</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="ddh7zdq-1785a33b-e53c-4391-a07b-5c8950be957f.png" alt="a smiling martin whitly saying 'Malcome, please stay.' overlayed an angry, pleading martin whitly yelling 'YOU CAN'T LEAVE'" height="253px" width="309x">
+            <p>"Whitly (Bloodless)" by MashiBun on DeviantArt</p>
+        </div>
+    </div>
+    <script>
+        var name = prompt("Hi! What is your name?");
+        console.log(name);
+        alert("Look at this hot dad, " + name + "!");
+
+        var name_change = document.getElementById("page");
+        name_change.textContent = name + ". He's hot, right?"
+
+                var i = 1;
+        function changeColor(event){
+            if (document.body.style.backgroundColor != "white"){
+                document.body.style.backgroundColor = "white";
+            }
+            i++;
+            if(i == 5){
+                clearInterval(intervalID);
+                console.log("This function ran 5 times")
+            }
+        }
+        var intervalID = setInterval(changeColor,1000)
+
+        var box = document.getElementById("headingG");
+        var boxRight = 0;
+        var slider = true;
+        function slide(){
+            if(slider ==true){
+                console.log("1st if statement")
+                box.style.left = boxRight + "px";
+                console.log(box.style.left);
+                boxRight++;
+                if(boxRight > 50){
+                    slider = false;
+                }
+        }
+            
+            if(slider == false){
+                console.log("second if statement")
+                box.style.left = boxRight+"px";
+                boxRight--;
+                if(boxRight<1){
+                    slider = true;
+                }
+            }
+        }
+        var timer = setInterval(slide, 40);
+    </script>
+</body>
+</html>
