@@ -1,0 +1,72 @@
+h1{
+    font-family: Times New Roman;
+    font-size: 52px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(255, 45, 185);
+}
+h2{
+    font-family: cursive;
+    font-size: 52px;
+    font-weight: 500;
+    text-align: left;
+    color: rgb(255, 45, 45);
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 52px;
+    font-weight: 500;
+    text-align: left;
+    color: rgb(129, 221, 71);
+}
+*{
+    background-color: black;
+}
+.column{
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+h4{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: whitesmoke;
+}
+h5{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: whitesmoke;
+}
+p{
+    font-size: 15px;
+    font-weight: 250;
+    text-align: left;
+    color: whitesmoke;
+}
+li{
+    font-size: 20px;
+    font-weight: 250;
+    text-align: left;
+    color: whitesmoke;
+}
+
+h6{
+    font-size: 52px;
+    font-weight: 500;
+    position: relative;
+    color: magenta;
+}
+#new_gallery{
+    height: 100px;
+    width: 2000px;
+    background-color: purple;
+}
